@@ -1,3 +1,5 @@
+// components/List.js
+
 import React, { useState } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
@@ -11,6 +13,7 @@ const Task = (props) => {
     return (
         <View style={styles.item}>
             <View style={styles.itemLeft}>
+                <Text style={styles.square}></Text>
                 <Text style={styles.itemText}>{props.text}</Text>
             </View>
             <TouchableOpacity onPress={handleToggleAlarm}>
@@ -31,7 +34,7 @@ const Task = (props) => {
 
 const styles = StyleSheet.create({
     container: {
-        width: 36,
+        width: 50, // Adjusted width to accommodate the longer time format
         height: 20,
         borderRadius: 10,
         justifyContent: 'center',
@@ -53,7 +56,7 @@ const styles = StyleSheet.create({
         left: 0,
     },
     slideRight: {
-        left: 20,
+        left: 30, // Adjusted left position for the longer time format
     },
     alarmOn: {
         backgroundColor: '#fff',
@@ -64,7 +67,7 @@ const styles = StyleSheet.create({
     itemText: {
         fontSize: 16,
         fontWeight: 'bold',
-        maxWidth: '80%'
+        maxWidth: '80%',
     },
     square: {
         width: 35,
