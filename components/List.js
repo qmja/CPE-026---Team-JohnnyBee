@@ -1,5 +1,3 @@
-// components/List.js
-
 import React, { useState } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
@@ -13,7 +11,6 @@ const Task = (props) => {
     return (
         <View style={styles.item}>
             <View style={styles.itemLeft}>
-                <Text style={styles.square}></Text>
                 <Text style={styles.itemText}>{props.text}</Text>
             </View>
             <TouchableOpacity onPress={handleToggleAlarm}>
@@ -34,16 +31,16 @@ const Task = (props) => {
 
 const styles = StyleSheet.create({
     container: {
-        width: 50, // Adjusted width to accommodate the longer time format
+        width: 50, 
         height: 20,
         borderRadius: 10,
         justifyContent: 'center',
     },
     alarmOnContainer: {
-        backgroundColor: '#F5C997',
+        backgroundColor: '#64CCC5',
     },
     alarmOffContainer: {
-        backgroundColor: 'black',
+        backgroundColor: '#4D4D54',
     },
     circular: {
         width: 16,
@@ -56,7 +53,7 @@ const styles = StyleSheet.create({
         left: 0,
     },
     slideRight: {
-        left: 30, // Adjusted left position for the longer time format
+        left: 30, 
     },
     alarmOn: {
         backgroundColor: '#fff',
@@ -68,14 +65,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold',
         maxWidth: '80%',
-    },
-    square: {
-        width: 35,
-        height: 35,
-        backgroundColor: '#F5C997',
-        opacity: 1.0,
-        marginRight: 15,
-        borderRadius: 8,
+        color: 'white'
     },
     itemLeft: {
         flexDirection: 'row',
@@ -83,7 +73,7 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap',
     },
     item: {
-        backgroundColor: '#7D7C7C',
+        backgroundColor: '#053B50',
         padding: 15,
         borderRadius: 20,
         flexDirection: 'row',
