@@ -1,23 +1,27 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from "react-native";
+import Logo from "./Logo";
 
-export default function SignUp({ navigation }) {
+export default function Login({ navigation }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSignUp = () => {
-    // You can implement your actual signup logic here.
-    // For this example, we'll simulate a successful signup and navigate to the "Welcome" screen.
+  const handleLogin = () => {
+    // You can implement your actual login logic here.
+    // For this example, we'll assume a simple hardcoded login for demonstration.
 
-    // Simulated successful signup:
-    alert("Sign up successful!");
-
-    // Navigate to the "Welcome" screen.
-    navigation.navigate("Welcome");
+    if (email === "nigga@example.com" && password === "nigga") {
+      // Simulated successful login.
+      navigation.navigate("Welcome");
+    } else {
+      // Simulated login failure.
+      alert("Login failed. Please check your email and password.");
+    }
   };
 
   return (
     <View style={styles.container}>
+        <Logo/>
       <TextInput
         style={styles.input}
         placeholder="Email"
@@ -31,11 +35,12 @@ export default function SignUp({ navigation }) {
         value={password}
         onChangeText={(text) => setPassword(text)}
       />
-      <TouchableOpacity style={styles.signUpButton} onPress={handleSignUp}>
-        <Text style={styles.signUpText}>Create Account</Text>
+      <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
+        <Text style={styles.loginText}>Log In</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate("Login")}>
-        <Text style={styles.loginLink}>Already have an account? Log in here</Text>
+      <Text style={styles.signupLink}>Don't have an account?</Text>
+      <TouchableOpacity onPress={() => navigation.navigate("SignUp")}>
+        <Text style={styles.signupLink}> Sign up here</Text>
       </TouchableOpacity>
     </View>
   );
@@ -45,6 +50,7 @@ const styles = StyleSheet.create({
   container: {
     alignItems: "center",
     marginTop: 10,
+    backgroundColor: 'white',
   },
   input: {
     width: 300,
@@ -55,20 +61,20 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     marginBottom: 10,
   },
-  signUpButton: {
-    backgroundColor: "#64CCC5",
+  loginButton: {
+    backgroundColor: "#176B87",
     paddingVertical: 10,
     paddingHorizontal: 30,
     borderRadius: 20,
     marginTop: 10,
   },
-  signUpText: {
+  loginText: {
     fontSize: 18,
     fontWeight: "bold",
     color: "white",
     textAlign: "center",
   },
-  loginLink: {
+  signupLink: {
     color: "#176B87",
     fontSize: 16,
   },
