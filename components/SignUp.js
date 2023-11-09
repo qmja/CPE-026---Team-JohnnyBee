@@ -6,14 +6,11 @@ export default function SignUp({ navigation }) {
   const [password, setPassword] = useState("");
 
   const handleSignUp = () => {
-    // You can implement your actual signup logic here.
-    // For this example, we'll simulate a successful signup and navigate to the "Welcome" screen.
-
-    // Simulated successful signup:
+    // herp me
     alert("Sign up successful!");
 
-    // Navigate to the "Welcome" screen.
-    navigation.navigate("Welcome");
+    // Hump me 
+    navigation.navigate("Dashboard");
   };
 
   return (

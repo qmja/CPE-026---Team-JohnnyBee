@@ -15,7 +15,7 @@ export default function Welcome() {
 
   const handleTimeConfirm = (time) => {
     setSelectedTime(time);
-    addAlarm(time); // Display the alarm immediately
+    addAlarm(time); 
     hideTimePicker();
   };
 

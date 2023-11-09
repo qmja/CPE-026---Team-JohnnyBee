@@ -7,14 +7,13 @@ export default function Login({ navigation }) {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    // You can implement your actual login logic here.
-    // For this example, we'll assume a simple hardcoded login for demonstration.
+    // Yawa mano mano muna bhie
 
-    if (email === "nigga@example.com" && password === "nigga") {
-      // Simulated successful login.
+    if (email === "ss@example.com" && password === "wow") {
+
       navigation.navigate("Welcome");
     } else {
-      // Simulated login failure.
+
       alert("Login failed. Please check your email and password.");
     }
   };
